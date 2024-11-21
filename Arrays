@@ -1,8 +1,8 @@
 import random
-print('Enter the kilometers:')
+print('Enter the kilometers:\n')
 h = [3,4,6]
 f = sorted(h)
-l = [100,300,313]
+km = [100,300,313]
 b = []
 p = 0
 for i in range(3):
@@ -22,7 +22,7 @@ while c[::] != f[::]:
         b.append(a)
 c = sorted(b)
 while c[::] == f[::]:
-    for k in l:
+    for k in km:
         p = p + k
         if p == 713:
             print('The cargo is found successfully!')
