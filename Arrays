@@ -1,6 +1,4 @@
-import os
-def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
+
 import random
 print('Enter the kilometers:')
 km = [3,4,6]
@@ -12,7 +10,6 @@ for i in range(3):
     a = int(input())
     b.append(a)
 c = sorted(b)
-clear()
 while c == f:
     for k in weight:
         p = p + k
@@ -26,7 +23,6 @@ while c != f:
         g = random.randint(1,7)
         km.append(g)
         f = sorted(km)
-    print(km)
     print('The cargo is not found: please, try again\n')
     print('Enter the kilometers:')
     clear()
