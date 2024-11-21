@@ -1,31 +1,43 @@
+import os
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 import random
-print('Enter the kilometers:\n')
-h = [3,4,6]
-f = sorted(h)
-km = [100,300,313]
+print('Enter the kilometers:')
+km = [3,4,6]
+f = sorted(km)
+weight = [100,300,313]
 b = []
 p = 0
 for i in range(3):
     a = int(input())
     b.append(a)
 c = sorted(b)
-while c[::] != f[::]:
-    h=[]
-    for j in range(3):
-        g = random.randint(1,7)
-        print(g)
-        h.append(g)
-    print('The cargo is not found: please, try again\n')
-    print('Enter the kilometers:')
-    for i in range(3):
-        a = int(input())
-        b.append(a)
-c = sorted(b)
-while c[::] == f[::]:
-    for k in km:
+clear()
+while c == f:
+    for k in weight:
         p = p + k
         if p == 713:
             print('The cargo is found successfully!')
     break
-
+while c != f:
+    km = []
+    b=[]
+    for j in range(3):
+        g = random.randint(1,7)
+        km.append(g)
+        f = sorted(km)
+    print(km)
+    print('The cargo is not found: please, try again\n')
+    print('Enter the kilometers:')
+    clear()
+    for i in range(3):
+        a = int(input())
+        b.append(a)
+        c = sorted(b)
+        if c == f:
+            for k in weight:
+                p = p + k
+                if p == 713:
+                    print('The cargo is found successfully!')
+            break
 
