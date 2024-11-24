@@ -1,6 +1,7 @@
 
 import random
-print('Enter the kilometers:')
+print('Welcome!')
+print('In order to find a cargo you need to enter 3 number of kilometers in column:')
 km = [3,4,6]
 f = sorted(km)
 weight = [100,300,313]
@@ -25,7 +26,6 @@ while c != f:
         f = sorted(km)
     print('The cargo is not found: please, try again\n')
     print('Enter the kilometers:')
-    clear()
     for i in range(3):
         a = int(input())
         b.append(a)
